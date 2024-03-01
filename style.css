@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --tt-color: hsl(240, 7%, 78%);
+    --tt-selected-color: hsl(0, 0%, 100%);
+    --tt-title-color: hsl(240, 9%, 89%);
+    --tt-desc-color: hsl(240, 9%, 89%);
+
+    --btn-border-color: hsl(0, 0%, 100%);
+    --btn-tt-color: hsl(0, 0%, 100%);
+    --btn-hover-bg-color: hsl(0, 0%, 100%);
+    --btn-hover-tt-color: hsl(194, 97%, 31%);
+}
+
+body {
+    height: 100vh;
+    background: center/cover  no-repeat url("./assets/mountains-universe-1.png");
+}
