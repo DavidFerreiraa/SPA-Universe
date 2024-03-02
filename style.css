@@ -21,9 +21,54 @@
     --btn-hover-tt-color: hsl(194, 97%, 31%);
 }
 
+html, body, button {
+    font-family: "Roboto", sans-serif;
+}
+
 body {
     height: 100vh;
     background: center/cover  no-repeat url("./assets/mountains-universe-1.png");
+    display: flex;
+    flex-direction: column;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+}
+
+#app h1 {
+    color: var(--tt-title-color);
+    font-size: 4.8rem;
+    line-height: 125%;
+}
+
+#app button {
+    padding: 1.2rem 3.2rem;
+
+    color: var(--btn-tt-color);
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+
+    border: 2px solid var(--btn-border-color);
+    border-radius: .5rem;
+
+    background: none;
+
+    cursor: pointer;
+
+    transition: background 1s;
+}
+
+#app button:hover {
+    background-color: var(--btn-hover-bg-color);
+
+    color: var(--btn-hover-tt-color);
 }
 
 nav {
