@@ -21,6 +21,6 @@ export class Router {
             document.querySelector("#app").innerHTML = dataHTML;
         })
 
-        console.log(route)
+        document.querySelector("body").classList.toggle(pathname.slice(1))
     }
 }

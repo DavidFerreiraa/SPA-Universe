@@ -19,6 +19,10 @@
     --btn-tt-color: hsl(0, 0%, 100%);
     --btn-hover-bg-color: hsl(0, 0%, 100%);
     --btn-hover-tt-color: hsl(194, 97%, 31%);
+
+    --bg-img-home: url("./assets/mountains-universe-1.png");
+    --bg-img-universe: url("./assets/mountains-universe02.png");
+    --bg-img-exploration: url("./assets/mountains-universe-3.png");
 }
 
 html, body, button {
@@ -27,7 +31,7 @@ html, body, button {
 
 body {
     height: 100vh;
-    background: center/cover  no-repeat url("./assets/mountains-universe-1.png");
+    background: center/cover  no-repeat var(--bg-img-home);
     display: flex;
     flex-direction: column;
 }
@@ -36,10 +40,8 @@ body {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    align-items: center;
-    justify-content: center;
-    gap: 2.4rem;
 }
+
 
 #app h1 {
     color: var(--tt-title-color);
@@ -49,25 +51,25 @@ body {
 
 #app button {
     padding: 1.2rem 3.2rem;
-
+    
     color: var(--btn-tt-color);
     font-weight: bold;
     font-size: 1.4rem;
     line-height: 2.4rem;
-
+    
     border: 2px solid var(--btn-border-color);
     border-radius: .5rem;
-
+    
     background: none;
-
+    
     cursor: pointer;
-
+    
     transition: background 1s;
 }
 
 #app button:hover {
     background-color: var(--btn-hover-bg-color);
-
+    
     color: var(--btn-hover-tt-color);
 }
 
@@ -75,7 +77,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 3.2rem;
-
+    
     padding: 4rem 7.2rem;
 }
 
@@ -85,11 +87,44 @@ nav a:not(img) {
     color: var(--tt-color);
     line-height: 2.1rem;
     text-decoration: none;
-
+    
     transition: font-size .2s;
 }
 
 nav a:not(img):hover {
     font-size: 2.4rem;
     color: var(--tt-selected-color);
+}
+
+#home-pg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 2.4rem;
+}
+
+#universe-pg, #exploration-pg {
+    padding: 6.3rem 10.2rem;
+}
+
+#universe-pg p, #exploration-pg p {
+    color: var(--tt-desc-color);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 160%;
+    margin-top: 1.6rem;
+}
+
+.home {
+    background: center/cover  no-repeat var(--bg-img-home);
+}
+
+.universe {
+    background: center/cover  no-repeat var(--bg-img-universe);
+}
+
+.exploration {
+    background: center/cover  no-repeat var(--bg-img-exploration);
 }
